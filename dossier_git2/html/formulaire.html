@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <title>Formulaire d'inscription</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <form>
+      <h1>Identité</h1>
+      <fieldset><br>
+        <label>Nom:</label>
+        <input type="text" name="nom" required id="id_nom"><br><br>
+        <label>Prénom:</label>
+        <input type="text" name="prenom" required id="id_prenom"><br><br>
+        <label>Sexe:</label>
+        <select name="sexe" required id="id_sexe">
+          <option value="" selected>---------</option>
+          <option value="Masculin">Masculin</option>
+          <option value="Féminin">Féminin</option>
+        </select><br><br>
+        <label>Date de naissance:</label>
+        <input type="date" name="datenaissance" required id="id_datenaissance"><br><br>
+        <label>Lieu de naissance:</label>
+        <input type="text" name="lieunaissance" id="id_lieunaissance"><br><br>
+        <label>E-mail:</label>
+        <input type="text" name="email" required id="id_email" maxlength="100"><br><br>
+        <label>Téléphone:</label>
+        <input type="tel" name="telephone" required id="id_telephone" maxlength="8"><br><br>
+        <label>Ville de résidence:</label>
+        <input type="text" name="residence" required id="id_residence">
+      </fieldset><br><br>
+      <h1>Informations sur le BAC II</h1>
+      <fieldset><br>
+        <label>Année d'obtension de BAC II:
+          <select name="anneebac2" required id="id_anneebac2">
+            <option value="" selected>---------</option>
+            <option value="2022">2022</option>
+            <option value="2021">2021</option>
+            <option value="2020">2020</option>
+            <option value="2019">2019</option>
+            <option value="2018">2018</option>
+            <option value="2017">2017</option>
+            <option value="2016">2016</option>
+            <option value="2015">2015</option>
+            <option value="2014">2014</option>
+            <option value="2013">2013</option>
+            <option value="2013">2013</option>
+            <option value="2013">2013</option>
+          </select><br><br>
+                  <select name="anneebac2" required id="id_anneebac2">
+                    <option value="" selected>---------</option>
+                    <option value="#{cette_annee}">2022</option>
+                    <option value="#{cette_annee}">2021</option>
+                    <option value="#{cette_annee}">2019</option>
+                    <option value="#{cette_annee}">2016</option>
+                    <option value="#{cette_annee}">2012</option>
+                    <option value="#{cette_annee}">2007</option>
+                    <option value="#{cette_annee}">2001</option>
+                    <option value="#{cette_annee}">1994</option>
+                    <option value="#{cette_annee}">1986</option>
+                    <option value="#{cette_annee}">1977</option>
+                  </select>
+        </label>
+      </fieldset>
+    </form>
+  </body>
+</html>
