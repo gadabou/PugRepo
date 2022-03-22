@@ -1,0 +1,76 @@
+doctype html
+html(lang="fr")
+    include header.pug
+    body
+        form
+            h1 Identité
+            fieldset
+                br
+                label Nom:
+                input(type="text" name="nom" required id="id_nom")
+                br
+                br
+                label Prénom:
+                input(type="text" name="prenom" required id="id_prenom")
+                br
+                br
+                label Sexe:
+                select(name="sexe" required id="id_sexe")
+                    option(value="" selected=true) ---------
+                    option(value="Masculin" ) Masculin
+                    option(value="Féminin") Féminin
+                br
+                br
+                label Date de naissance:
+                input(type="date" name="datenaissance" required=true id="id_datenaissance")
+                br
+                br
+                label Lieu de naissance:
+                input(type="text" name="lieunaissance" id="id_lieunaissance")
+                br
+                br
+                label E-mail:
+                input(type="text" name="email" required=true id="id_email" maxlength=100)
+                br
+                br
+                label Téléphone:
+                input(type="tel" name="telephone" required=true id="id_telephone" maxlength=8)
+                br
+                br
+                label Ville de résidence:
+                input(type="text" name="residence" required=true id="id_residence")
+            br
+            br
+            h1 Informations sur le BAC II
+            fieldset
+                br
+                mixin select_year()
+                    - var cette_annee = new Date().getFullYear();
+                    - var n=0;
+                    select(name="anneebac2" required id="id_anneebac2")
+                        option(value="" selected=true) ---------
+                        while n < 10
+                            //- console.log(cette_annee-n)
+                            - cette_annee = cette_annee - n
+                            option(value="#{cette_annee}" ) #{cette_annee}
+                            - n++
+
+                label Année d'obtension de BAC II:
+                    select(name="anneebac2" required id="id_anneebac2")
+                        option(value="" selected=true) ---------
+                        option(value="2022" ) 2022
+                        option(value="2021" ) 2021
+                        option(value="2020" ) 2020
+                        option(value="2019" ) 2019
+                        option(value="2018" ) 2018
+                        option(value="2017" ) 2017
+                        option(value="2016" ) 2016
+                        option(value="2015" ) 2015
+                        option(value="2014" ) 2014
+                        option(value="2013" ) 2013
+                        option(value="2013" ) 2013
+                        option(value="2013" ) 2013
+                    br
+                    br
+
+                    +select_year()
